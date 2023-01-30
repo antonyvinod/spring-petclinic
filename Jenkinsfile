@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Test Env'
+    }
+
+  }
   stages {
     stage('Compile') {
       steps {
